@@ -1,0 +1,8 @@
+<!--pages/orderResult/index.wxml-->
+<view>
+  <image class="result-icon block" src="../../images/submit.png"></image>
+  <view class="flex-box-around">
+    <button class="btn-base result-btn" bindtap="checkOrder">查看订单</button>
+    <button class="btn-base result-btn" bindtap="backIndex">返回首页</button>
+  </view>
+</view>

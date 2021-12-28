@@ -1,0 +1,10 @@
+/* pages/orderResult/index.wxss */
+.result-icon {
+  width: 240rpx;
+  height: 240rpx;
+  margin: 100rpx auto;
+}
+
+.result-btn {
+  width: 35%;
+}

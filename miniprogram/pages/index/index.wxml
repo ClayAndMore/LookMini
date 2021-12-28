@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container pb-20">
+  <swiper class="width-100 swiper-height" indicator-color='#666666' indicator-active-color='#40a7e7' indicator-dots="true" autoplay="true" circular="true" interval="3000" duration="300" previous-margin="0px" next-margin="0px">
+    <block wx:for="{{bannerImgList}}" wx:key="index">
+      <swiper-item>
+        <image class="width-100 swiper-height" mode="aspectFit" src="{{item.imgUrl}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="flex-box-around width-100">
+    <block wx:for="{{itemList}}" wx:key="index">
+      <view class="item-box">
+        <image class="item-img" src="{{item.icon}}"></image>
+        <view class="placeholder">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="width-100">
+    <view class="flex-box-around">
+      <view class="break-word pt-60 text-t1">Meticulous work
+        多 道 工 序
+        精 细 做 工
+      </view>
+      <image class="img-t1" src="cloud://prod-1gukkkce639453a0.7072-prod-1gukkkce639453a0-1308496201/images/T1.png"></image>
+    </view>
+    <view class="flex-box-between t-margin mb-40 pl-20 pr-20">
+      <view class="t2-box break-word color-fff pt-20 text-center">
+        专业验光师验光\n
+        <text class="register-btn" bindtap="handleAppointment">立即预约></text>
+        <image class="img-t2 block" src="cloud://prod-1gukkkce639453a0.7072-prod-1gukkkce639453a0-1308496201/images/T2.png"></image>
+      </view>
+      <view class="break-word pt-60 text-right text-t2">Professional optometry
+        专业验光
+        戴上舒适，视物更清晰
+      </view>
+    </view>
+    <view class="flex-box-around mt-40">
+      <image class="img-t3-more mt-40" src="cloud://prod-1gukkkce639453a0.7072-prod-1gukkkce639453a0-1308496201/images/T3_more.png"></image>
+      <image class="img-t3" src="cloud://prod-1gukkkce639453a0.7072-prod-1gukkkce639453a0-1308496201/images/T3.png"></image>
+    </view>
+  </view>
+  <view class="width-100 bg-fff mt-40">
+    <view class="class-tit pt-20 pb-20 width-100 text-center">
+      -推荐预约-
+    </view>
+    <view class="pb-20">
+      <block wx:for="{{productList}}" wx:key="index">
+        <view class="list-item-box border-bottom border-top bg-fff" bindtap="handleDetail" data-item="{{item}}">
+          <image class="list-item-img block mr-20" src="{{item.imgUrl}}"></image>
+          <view class="text-left order-desp">
+            <view class="order-tit font-28">{{item.title}}</view>
+            <view class="width-100 ell color-999">{{item.desp}}</view>
+            <view class="order-price color-blue">{{item.price || '价格面议'}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!-- <view class="class-more pt-20 pb-20 width-100 text-center color-999">
+      查看更多>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<!--pages/user/index.wxml-->
+<view>
+  <view class="user-header bg-blue">
+    <view class="header-icon-box color-fff text-center">
+      <block wx:if="{{islogin}}">
+        <image class="header-icon block" src="/images/USER.png"></image>
+        <!-- <button class="header-icon-btn bg-blue color-fff" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button> -->
+        <button wx:if="{{userParam.errMsg}}" class="header-icon-btn bg-blue color-fff" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号</button>
+        <button wx:else class="header-icon-btn bg-blue color-fff" bindtap="handleUserInfo">请点击登陆</button>
+      </block>
+      <block wx:else>
+        <image class="header-icon block" src="{{userData.avatarUrl}}"></image>
+        <view class="color-fff">{{userData.nickName}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="user-container">
+    <view class="info-wrapper">
+      <view class="info-detail-item">
+        <view class="info-detail-item-title flex-box-between border-bottom " bindtap="handleOrderInfo">
+          <view class="item-title">所有订单</view>
+          <image class="arrow-img block" src="/images/arrow.png"></image>
+        </view>
+        <view class="order-status flex-box-around pb-20">
+          <block wx:for="{{orderStatus}}" wx:key="title">
+            <view bindtap="handleOrderInfo" data-status="{{item.status}}">
+              <image class="status-icon block bg-blue" src="{{item.url}}"></image>
+              {{item.title}}
+            </view>
+          </block>
+        </view>
+      </view>
+      <view wx:if="{{userData.role === 'admin'}}" class="info-detail-item">
+        <view class="info-detail-item-title flex-box-between border-bottom" bindtap="handleUserManagement">
+          <view class="item-title">会员管理</view>
+          <image class="arrow-img block" src="/images/arrow.png"></image>
+        </view>
+        <view class="info-detail-item-title flex-box-between" bindtap="handleOrderManagement">
+          <view class="item-title">订单管理</view>
+          <image class="arrow-img block" src="/images/arrow.png"></image>
+        </view>
+      </view>
+      <view class="info-detail-item">
+        <view class="info-detail-item-title flex-box-between border-bottom " bindtap="handleMap">
+          <view class="">地址:太原市小店区北张购物广场B座10</view>
+          <image class="arrow-img block" src="/images/arrow.png"></image>
+        </view>
+        <view class="info-detail-item-title flex-box-between border-bottom ">
+          <view class="">电话:16636662571</view>
+          <image class="arrow-img block" src="/images/arrow.png"></image>
+        </view>
+        <view class="info-detail-item-title flex-box-between">
+          <view class="">时间:周一至周五 09:00-18:00</view>
+          <image class="arrow-img block" src="/images/arrow.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

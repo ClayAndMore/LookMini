@@ -1,0 +1,28 @@
+<view>
+  <view class="bg-fff pb-20">
+    <image class="width-100" src="{{detail.imgUrl}}"></image>
+    <view class="list-item-box pl-20 pr-20">
+      <view class="detail-tit font-28">{{detail.title}}</view>
+      <view class="detail-desp color-999 ell">{{detail.desp}}</view>
+      <view class="item-val mt-20"><text class="color-blue">{{detail.price || '价格面议'}}</text>已预约:{{detail.reserved}}剩余:{{detail.quantity}}</view>
+    </view>
+  </view>
+
+  <view class="bg-fff mt-20">
+    <view class="border-bottom font-28 pl-20 pr-20 pt-20 pb-20 flex-box-center">
+      <text class="detail-tit-icon bg-blue mr-20"></text>
+      <text>服务详情</text>
+    </view>
+    <view class="pl-20 pr-20 pt-20 pb-20 break-word">
+      {{detail.desp}}
+    </view>
+  </view>
+  <view class="detail-bottom width-100 bg-fff flex-box-center flex-box-around ">
+    <view class="text-center detail-phone" bindtap="phoneCall">
+      <image class="detail-phone-img ma block" src="../../images/call.png"></image>
+      电话
+    </view>
+    <button class="btn-base detail-btn" bindtap="handleConfrim">立即预约</button>
+  </view>
+
+</view>

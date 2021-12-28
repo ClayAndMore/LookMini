@@ -1,0 +1,188 @@
+/**app.wxss**/
+page {
+  background: #f6f6f6;
+  font-size: 24rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.flex-box-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-box-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-box-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.flex-box-center {
+  display: flex;
+  align-items: center;
+}
+
+.pt-20 {
+  padding-top: 20rpx;
+}
+
+.pb-20 {
+  padding-bottom: 20rpx;
+}
+
+.pl-20 {
+  padding-left: 20rpx;
+}
+
+.pr-20 {
+  padding-right: 20rpx;
+}
+
+.pt-60 {
+  padding-top: 60rpx;
+}
+
+.mt-20 {
+  margin-top: 20rpx;
+}
+
+.mb-20 {
+  margin-bottom: 20rpx;
+}
+
+.ml-20 {
+  margin-left: 20rpx;
+}
+
+.mr-20 {
+  margin-right: 20rpx;
+}
+
+
+.mt-40 {
+  margin-top: 40rpx;
+}
+
+.mb-40 {
+  margin-bottom: 40rpx !important;
+}
+
+.ma {
+  margin: 0 auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-fff {
+  color: #fff;
+}
+
+.color-999 {
+  color: #999;
+}
+
+.bg-fff {
+  background-color: #fff;
+}
+
+.bg-blue {
+  background-color: rgb(58, 130, 248);
+}
+
+.break-word {
+  word-break: normal;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 24rpx;
+  outline: 0;
+}
+
+.ell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.color-blue {
+  color: rgb(58, 130, 248);
+}
+
+.color-red {
+  color: red;
+}
+
+.btn-base {
+  /* height: 50rpx; */
+  border: none;
+  outline: 0;
+  background-color: rgb(58, 130, 248);
+  color: #fff;
+  border-radius: 100rpx;
+  font-size: 24rpx;
+  cursor: pointer;
+  /* line-height: 50rpx; */
+  /* vertical-align: ; */
+}
+
+.block {
+  display: block;
+}
+
+.border-bottom {
+  border-bottom: 1rpx solid #ececec;
+}
+
+.border-top {
+  border-top: 1rpx solid #ececec;
+}
+
+.font-28 {
+  font-size: 28rpx;
+}

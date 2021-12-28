@@ -1,0 +1,56 @@
+<!--pages/confirmOrder/index.wxml-->
+<view>
+  <view class="list-item-box border-bottom border-top flex-box-between bg-fff">
+    <image class="list-item-img block mr-20" src="{{detail.imgUrl}}"></image>
+    <view class="text-left order-desp">
+      <view class="order-tit font-28">{{detail.title}}</view>
+      <view class="width-100 ell color-999">{{item.name}} <text class="color-blue">{{item.moblie}}</text></view>
+    </view>
+  </view>
+  <view class="bg-fff mt-20 form-box">
+    <form catchsubmit="formSubmit">
+      <view class="border-bottom pb-20 pt-20">
+        <view class="font-28 mb-20">
+          <span class="color-red"> * </span>配镜价格
+        </view>
+        <view>
+          <input type="text" name="orderPrice" value="{{detail.orderPrice || ''}}" disabled="{{detail.orderPrice || false}}" placeholder="请输入价格" />
+        </view>
+      </view>
+      <view class=" border-bottom pb-20 pt-20">
+        <view class="font-28  mb-20">
+          <span class="color-red"> * </span>镜框型号
+        </view>
+        <view>
+          <input type="text" name="model" value="{{detail.model || ''}}" disabled="{{detail.model || false}}" placeholder="请输入镜框型号" />
+        </view>
+      </view>
+      <view class=" border-bottom pb-20 pt-20">
+        <view class="font-28  mb-20">
+          <span class="color-red"> * </span>镜片品牌
+        </view>
+        <view>
+          <input type="text" name="brand" value="{{detail.brand || ''}}" disabled="{{detail.brand || false}}" placeholder="请输入镜片品牌" />
+        </view>
+      </view>
+      <view class=" border-bottom pb-20 pt-20">
+        <view class="font-28  mb-20">
+          <span class="color-red"> * </span>左眼度数
+        </view>
+        <view>
+          <input type="text" name="left" value="{{detail.left || ''}}" disabled="{{detail.left || false}}" placeholder="请输入左眼度数" />
+        </view>
+      </view>
+      <view class=" border-bottom pb-20 pt-20">
+        <view class="font-28  mb-20">
+          <span class="color-red"> * </span>右眼度数
+        </view>
+        <view>
+          <input type="text" name="rigit" value="{{detail.rigit || ''}}" disabled="{{detail.rigit || false}}" placeholder="请输入左眼度数" />
+        </view>
+      </view>
+      <view wx:if="{{detail.orderStatus !== 'PENDING' }}" class="pt-20 pb-20 bg-fff">操作人:{{detail.actionName}}</view>
+      <view wx:if="{{detail.orderStatus === 'PENDING' }}" class="order-submit width-100 pt-20 pb-20 bg-fff"> <button class="btn-base width-90 " formType="submit">登记</button></view>
+    </form>
+  </view>
+</view>

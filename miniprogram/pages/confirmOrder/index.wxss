@@ -1,0 +1,12 @@
+/* pages/confirmOrder/index.wxss */
+@import '../orderInfo/index.wxss';
+
+.form-box {
+  padding: 30rpx;
+}
+
+.order-submit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

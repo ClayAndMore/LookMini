@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/glasses/index",
+    "pages/appointment/index",
+    "pages/user/index",
+    "pages/orderInfo/index",
+    "pages/goodsDetail/index",
+    "pages/confirmOrder/index",
+    "pages/orderResult/index",
+    "pages/map/index",
+    "pages/userInfo/index",
+    "pages/allOrderInfo/index",
+    "pages/updateOrder/index"
+  ],
+  "window": {
+    "backgroundColor": "#FFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "路客眼镜",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#dbdbdb",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tab/000002.png",
+        "selectedIconPath": "images/tab/000004.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/glasses/index",
+        "iconPath": "images/tab/0000022.png",
+        "selectedIconPath": "images/tab/0000024.png",
+        "text": "专业配镜"
+      },
+      {
+        "pagePath": "pages/appointment/index",
+        "iconPath": "images/tab/0000032.png",
+        "selectedIconPath": "images/tab/0000034.png",
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "images/tab/0000042.png",
+        "selectedIconPath": "images/tab/0000044.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

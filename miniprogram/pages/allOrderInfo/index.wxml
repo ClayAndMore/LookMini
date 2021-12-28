@@ -1,0 +1,41 @@
+<view>
+  <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick" bindchange="onChange" activeClass="tab-bar-title__selected" tab-underline-color="#0085e5">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content mt-20" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
+        <scroll-view scroll-y="true" style="height: 88vh;" bindscrolltolower="handleLower">
+          <block wx:if="{{orderList.length>0}}">
+            <block wx:for="{{orderList}}" wx:key="title">
+              <view class="list-item text-center">
+                <!-- <image class="list-item-img" src="../../images/detail.jpeg"></image>
+              <view class="list-item-box">
+                <view class="">预约配镜-太阳镜（可配近视度数） 记忆板材</view>
+              </view>
+              <view class="list-item-box">
+                <view class="item-tit ell">太阳眼镜，是一种为防止太阳光强烈刺激造成对人眼伤害的视力</view>
+              </view> -->
+                <view class="list-item-box flex-box-between">
+                  <view class="item-val ell width-60">订单号:<text class="color-blue">{{item._id}}</text></view>
+                  <text class="item-val color-blue">{{obj[item.orderStatus]}}</text>
+                </view>
+                <view class="list-item-box border-bottom border-top flex-box-between">
+                  <image class="list-item-img block mr-20" src="{{item.imgUrl}}"></image>
+                  <view class="text-left order-desp">
+                    <view class="order-tit font-28">{{item.title}}</view>
+                    <view class="width-100  color-999 break-word">用户备注:{{item.more}}</view>
+                    <view class="width-100 ell color-999">{{item.name}} <text class="color-blue">{{item.moblie}}</text></view>
+                  </view>
+                </view>
+                <view wx:if="{{item.orderStatus === 'PENDING' || item.orderStatus === 'DONE' }}" class="list-item-box flex-box-end ">
+                  <button class="btn-base item-btn" bindtap="handleUpdate" data-item="{{item}}">{{item.orderStatus === 'PENDING' ? '信息登记' : '查看订单' }}</button>
+                </view>
+              </view>
+            </block>
+          </block>
+          <block wx:if="{{onBottom}}">
+            <view class="color-999 pb-20 pt-20 mb-20 text-center">人家也是有底线的～</view>
+          </block>
+        </scroll-view>
+      </view>
+    </block>
+  </mp-tabs>
+</view>

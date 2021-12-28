@@ -1,0 +1,40 @@
+<!--pages/confirmOrder/index.wxml-->
+<view>
+  <view class="list-item-box border-bottom border-top flex-box-between bg-fff">
+    <image class="list-item-img block mr-20" src="{{detail.imgUrl}}"></image>
+    <view class="text-left order-desp">
+      <view class="order-tit font-28">{{detail.title}}</view>
+      <view class="width-100 ell color-999">{{detail.desp}}</view>
+      <view class="order-price color-blue">{{detail.price || '价格面议'}}</view>
+    </view>
+  </view>
+  <view class="bg-fff mt-20 form-box">
+    <form catchsubmit="formSubmit">
+      <view class="border-bottom pb-20 pt-20">
+        <view class="font-28 mb-20">
+          <span class="color-red"> * </span>姓名
+        </view>
+        <view>
+          <input type="text" name="name" placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class=" border-bottom pb-20 pt-20">
+        <view class="font-28  mb-20">
+          <span class="color-red"> * </span>手机号
+        </view>
+        <view>
+          <input type="number" name="phone" maxlength="11" value="{{userInfo.moblie}}" placeholder="请输入手机号" />
+        </view>
+      </view>
+      <view class=" pb-20 pt-20">
+        <view class="font-28  mb-20">
+          <span class="color-red"> * </span>留言信息
+        </view>
+        <view>
+          <textarea name="more" auto-height placeholder="请输入留言信息"></textarea>
+        </view>
+      </view>
+      <view class="order-submit width-100 pt-20 pb-20 bg-fff"> <button class="btn-base width-90 " formType="submit">立即预约</button></view>
+    </form>
+  </view>
+</view>

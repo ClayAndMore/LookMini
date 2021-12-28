@@ -1,0 +1,30 @@
+<view>
+  <mp-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabClick" bindchange="onChange" activeClass="tab-bar-title__selected" tab-underline-color="#0085e5">
+    <block wx:for="{{tabs}}" wx:key="title">
+      <view class="tab-content bg-fff mt-20" data-set="{{item}}" slot="tab-content-{{index}}" bind:tap="handleClick">
+        <scroll-view scroll-y="true" style="height: 88vh;" bindscrolltolower="handleLower">
+          <block wx:if="{{productList.length>0}}">
+            <block wx:for="{{productList}}" wx:key="title">
+              <view class="list-item text-center" bindtap="handleDetail" data-item="{{item}}">
+                <image class="list-item-img" src="{{item.imgUrl}}"></image>
+                <view class="list-item-box">
+                  <view class="">{{item.title}}</view>
+                </view>
+                <view class="list-item-box">
+                  <view class="item-tit ell">{{item.desp}}</view>
+                </view>
+                <view class="list-item-box">
+                  <view class="item-val"><text class="color-blue">{{item.price || '价格面议'}}</text>已预约:{{item.reserved}}剩余:{{item.quantity}}</view>
+                  <button class="btn-base item-btn">立即预约</button>
+                </view>
+              </view>
+            </block>
+          </block>
+          <block wx:if="{{onBottom}}">
+            <view class="color-999 pb-20 pt-20 mb-20 text-center">人家也是有底线的～</view>
+          </block>
+        </scroll-view>
+      </view>
+    </block>
+  </mp-tabs>
+</view>

@@ -1,0 +1,84 @@
+/* pages/user/index.wxss */
+
+.user-header {
+  width: 120%;
+  height: 320rpx;
+  /* background: #d12f3a; */
+  position: relative;
+  left: -10%;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 40rpx auto 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid rgba(255, 255, 255, .5);
+}
+
+.border-bottom {
+  border-bottom: 2rpx solid #eee;
+}
+
+.user-container {
+  position: relative;
+  top: -70rpx;
+  margin-bottom: -70rpx;
+}
+
+.info-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 8rpx;
+}
+
+.info-detail-item {
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  -webkit-box-shadow: 0 0 16rpx 0 rgb(0 0 0 / 3%);
+  box-shadow: 0 0 16rpx 0 rgb(0 0 0 / 3%);
+  overflow: hidden;
+}
+
+.info-detail-item-title {
+  height: 88rpx;
+  line-height: 88rpx;
+  position: relative;
+  cursor: pointer;
+  color: #353535;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.arrow-img {
+  width: 14rpx;
+  height: 24rpx;
+}
+
+.item-title {
+  width: 140rpx;
+}
+
+.status-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+  border: 4rpx solid rgb(58, 130, 248);
+  padding: 5rpx;
+}
+
+.header-icon-btn {
+  width: 50%;
+  font-size: 24rpx;
+  border: 1rpx solid #fff;
+  display: block;
+  margin: 0 auto;
+}

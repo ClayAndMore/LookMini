@@ -1,0 +1,170 @@
+/**index.wxss**/
+
+.title {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #000000;
+  font-size: 44rpx;
+  margin-bottom: 40rpx;
+}
+
+.line {
+  width: 95%;
+  margin: 0 auto;
+  height: 2rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.swiper-height {
+  height: 360rpx;
+}
+
+
+.item-box {
+  margin: 40rpx 0;
+  flex: 1;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.item-img {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+
+.t1-box {
+  left: 0;
+  top: 0;
+}
+
+.t2-box {
+  width: 40%;
+  height: 176rpx;
+  line-height: 40rpx;
+  position: relative;
+}
+
+.t3-box {
+  left: 0;
+  top: 600;
+}
+
+.text-t1 {
+  width: 200rpx;
+}
+
+.text-t2 {
+  width: 304rpx;
+}
+
+
+.img-t1 {
+  width: 458rpx;
+  height: 290rpx;
+}
+
+.img-t2 {
+  width: 368rpx;
+  height: 270rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.img-t3 {
+  width: 538rpx;
+  height: 290rpx;
+}
+
+.img-t3-more {
+  width: 100rpx;
+  height: 220rpx;
+}
+
+.t-margin {
+  margin-top: -40rpx;
+}
+
+.register-btn {
+  width: 180rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  background-color: rgb(58, 130, 248);
+  box-shadow: rgb(46 104 198) 0rpx 6rpx 0rpx 0rpx;
+  padding: 5rpx 20rpx;
+  border-radius: 10rpx;
+}
+
+.class-tit {
+  font-size: 30rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ececec;
+}
+
+.class-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .class-item {
+  width: 42%;
+  overflow: hidden;
+  border-radius: 4rpx;
+  box-shadow: 0 1rpx 8rpx 0 rgb(0 0 0 / 10%);
+  font-size: 28rpx;
+  padding: 20rpx;
+} */
+
+.class-img {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.class-more {
+  line-height: 60rpx;
+  border-top: 1rpx solid #ececec;
+}
+
+.list-item {
+  width: 84%;
+  margin: 30rpx auto 0;
+  padding: 30rpx;
+  background-color: #ffffff;
+  font-size: 28rpx;
+}
+
+.list-item-box {
+  display: flex;
+  padding: 20rpx;
+}
+
+.item-tit {
+  /* width: 22%; */
+  color: #666;
+}
+
+
+.item-val {
+  font-size: 24rpx;
+  line-height: 64rpx;
+}
+
+.list-item-img {
+  width: 130rpx;
+  height: 130rpx;
+  /* display: block; */
+  border: 1rpx solid #ececec;
+  border-radius: 15rpx;
+}
+
+.order-desp {
+  width: 74%;
+  font-size: 24rpx;
+}

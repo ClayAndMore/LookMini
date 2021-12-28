@@ -1,0 +1,38 @@
+<view>
+  <view>
+    <mp-searchbar bindblur="selectResult" bindclear="selectClear" placeholder="手机号搜索"></mp-searchbar>
+  </view>
+  <view class="tab-content mt-20">
+    <scroll-view scroll-y="true" style="height: 88vh;" bindscrolltolower="handleLower">
+      <block wx:if="{{!searchValue && orderList.length>0}}">
+        <block wx:for="{{orderList}}" wx:key="title">
+          <view class="list-item text-center">
+            <view class="list-item-box border-bottom border-top">
+              <image class="list-item-img block mr-20" src="{{item.userInfo.avatarUrl}}"></image>
+              <view class="order-desp text-left">
+                <view class="order-tit font-28">昵称:{{item.userInfo.nickName}}</view>
+                <view class="width-100 ell color-999">手机号:{{item.moblie}} <text class="color-blue">权限:{{item.role}}</text></view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <block wx:else>
+        <block wx:for="{{searchList}}" wx:key="title">
+          <view class="list-item text-center">
+            <view class="list-item-box border-bottom border-top">
+              <image class="list-item-img block mr-20" src="{{item.userInfo.avatarUrl}}"></image>
+              <view class="order-desp text-left">
+                <view class="order-tit font-28">昵称:{{item.userInfo.nickName}}</view>
+                <view class="width-100 ell color-999">手机号:{{item.moblie}} <text class="color-blue">权限:{{item.role}}</text></view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </block>
+      <block wx:if="{{onBottom}}">
+        <view class="color-999 pb-20 pt-20 mb-20 text-center">人家也是有底线的～</view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

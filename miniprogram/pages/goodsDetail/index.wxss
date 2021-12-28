@@ -1,0 +1,27 @@
+/* pages/goodsDetail/index.wxss */
+.detail-tit-icon {
+  height: 28rpx;
+  width: 8rpx;
+  display: inline-block;
+  border-radius: 4rpx;
+}
+
+.detail-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+}
+
+.detail-phone {
+  width: 100rpx;
+}
+
+.detail-phone-img {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.detail-btn {
+  width: 500rpx !important;
+}

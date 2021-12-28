@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e dev-bbdba2 --n quickstartFunctions --r --project "/Users/jonathan/Downloads/mywork/look" --report_first --report
