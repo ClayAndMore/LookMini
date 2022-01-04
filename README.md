@@ -14,4 +14,4 @@
 
 扫码体验小程序
 
-- [小程序](../img/qrcode.jpg)
+![image](/img/qrcode.jpg)
