@@ -10,3 +10,8 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
+## 小程序码
+
+扫码体验小程序
+
+- [小程序](../img/qrcode.jpg)

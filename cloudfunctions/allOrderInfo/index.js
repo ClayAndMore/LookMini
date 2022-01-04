@@ -6,7 +6,7 @@ const db = cloud.database({
 })
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-  const orderInfo = db.collection('order_info')
+  const orderInfo = db.collection('order_info').orderBy('create', 'desc')
   switch (event.method) {
     case "GET":
       if (event.param.orderStatus === "ALL") {
