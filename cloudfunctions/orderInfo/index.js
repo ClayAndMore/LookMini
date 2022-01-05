@@ -6,20 +6,20 @@ const db = cloud.database({
 })
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
-  const orderInfo = db.collection('order_info').orderBy('create', 'desc')
+  const orderInfo = db.collection('order_info')
   switch (event.method) {
     case "GET":
       if (event.param.orderStatus === "ALL") {
         return orderInfo
           .where({
             openid: wxContext.OPENID,
-          }).skip(event.param.page * event.param.size).limit(event.param.size).get()
+          }).orderBy('create', 'desc').skip(event.param.page * event.param.size).limit(event.param.size).get()
       }
       return orderInfo
         .where({
           openid: wxContext.OPENID,
           orderStatus: event.param.orderStatus
-        }).skip(event.param.page * event.param.size).limit(event.param.size).get()
+        }).orderBy('create', 'desc').skip(event.param.page * event.param.size).limit(event.param.size).get()
       break;
     case "POST":
       // delete event.method
