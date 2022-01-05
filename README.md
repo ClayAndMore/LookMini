@@ -1,13 +1,12 @@
----
-highlight: a11y-dark
-theme: smartblue
----
+
 # 初衷
 从2018年微信小程的爆火，到现在的各家小程序、跨平台小程序框架。已经出现在大家生活中三年了，而且有着越来越深度的使用。经过几年的发展微信官方提供了云开发的模式，我就在想作为一位开发者，那不就是可以实现当初全栈工程师的目标了么。所以有了这篇文章，是我想成为全栈工程师的第一步，也希望是你们的第一步。
 # 项目介绍
 朋友开了一家眼镜店，跟我说了一下能不能在手机上把用户信息获取到，而且维护好他眼睛店的客户信息。我一想这不是小程序正合适嘛。于是我在网上找这种眼镜店的设计稿，找好之后，按照他的需求，有小程序预约到店办理业务、订单维护、用户信息维护。有了需求，设计也有了，正好使用小程序的云开发我就可以自己做一个项目了。
 
 在这个项目过程中，遇到的问题，很值得记录下来。于是行文，将我实现过程的种种，作为分享，希望能帮助到一些童鞋。
+
+
 ## 项目预览
 ### 调用接口
 > ![Jan-04-2022 16-16-30.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67c51ad2d8b94970ad9d6f4c1c4adb64~tplv-k3u1fbpfcp-watermark.image?)
@@ -18,6 +17,7 @@ theme: smartblue
 ### 订单维护
 > ![Jan-04-2022 16-33-29.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/68452ce16f57415cb4e01e064c75cdf6~tplv-k3u1fbpfcp-watermark.image?)
 ## 项目信息
+![image](/img/qrcode.jpg)
 > [Github源码地址:路客眼镜](https://github.com/LookGlasses/LookMini) 有需要的欢迎Fork ，如果喜欢，请给个Star~
 # 项目内容
 ## 项目目录
